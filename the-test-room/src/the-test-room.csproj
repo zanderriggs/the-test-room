@@ -9,7 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Input\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Configuration\" />
+    <Folder Include="Output\" />
   </ItemGroup>
 
 </Project>
