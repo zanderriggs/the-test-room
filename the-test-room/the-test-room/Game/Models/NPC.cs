@@ -2,10 +2,10 @@
 
 public class NPC
 {
-    private string Id { get; set; }
-    private string Name { get; set; }
-    private string Description { get; set; }
-    private string Status { get; set; }
-    private List<string> Items { get; set; }
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public string Status { get; set; }
+    public List<string> Items { get; set; }
 }
 
