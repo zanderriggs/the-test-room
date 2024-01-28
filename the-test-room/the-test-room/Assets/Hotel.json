@@ -1,0 +1,16 @@
+{
+  "Locations": [
+    {
+      "id": "1",
+      "name": "Lobby",
+      "description": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
+      "status": ""
+    },
+    {
+      "id": "2",
+      "name": "Main Hall",
+      "description": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
+      "status": ""
+    }
+  ]
+}
