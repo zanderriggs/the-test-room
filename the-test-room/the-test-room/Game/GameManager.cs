@@ -68,31 +68,31 @@ class GameManager
     /// Loads the level.
     /// </summary>
     /// <returns>Level object with list of locations.</returns>
-    public Hotel LoadLevel()
+    public Level LoadLevel()
     {
         // Filepath to asset
         var jsonFilePath = "C:\\git\\the-test-room\\The-Test-Room\\the-test-room\\Assets\\Hotel.json";
         
         // Read JSONfile at filepath
         var jsonContent = File.ReadAllText(jsonFilePath);
-        var level = new Hotel();
+        var level = new Level();
 
         try
         {
             // Deserialize JSON
-            level = JsonConvert.DeserializeObject<Hotel>(jsonContent);
+            level = JsonConvert.DeserializeObject<Level>(jsonContent);
 
             if (level == null)
             {
                 Console.WriteLine("Location data not found");
-                return new Hotel();
+                return new Level();
             }
             return level;
         }
         catch (Exception ex) 
         {
             Console.WriteLine($"An exception occurred while deserializing Json: {ex.Message}");
-            return new Hotel();
+            return new Level();
         }
     }
 }

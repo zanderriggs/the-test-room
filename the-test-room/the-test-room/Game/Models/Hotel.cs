@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace the_test_room.Game.Models;
 
-public class Hotel
+public class Level
 {
     public List<Location> Locations { get; set; }
 
