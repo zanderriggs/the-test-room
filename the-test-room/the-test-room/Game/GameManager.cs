@@ -30,38 +30,8 @@ class GameManager
             Console.WriteLine("Press \"q\" to quit.");
 
             // Collect user input
-            input = GetUserInput();
+            //input = GetUserInput();
         }
-    }
-
-    /// <summary>
-    /// Collects user input and ensures that it's alphanumeric.
-    /// </summary>
-    /// <returns>Stringified version of user input.</returns>
-    static string GetUserInput()
-    {
-        var input = Console.ReadLine();
-
-        if (IsAlphanumeric(input))
-        {
-
-        }
-
-        return input;
-    }
-
-    /// <summary>
-    /// Checks whether input is alphanumeric.
-    /// </summary>
-    /// <param name="input"></param>
-    /// <returns>Boolean true/false.</returns>
-    static bool IsAlphanumeric(string input)
-    {
-        // Regular expression pattern to match only letters and numbers
-        string pattern = "^[a-zA-Z0-9]+$";
-
-        // Check if the input matches the pattern
-        return Regex.IsMatch(input, pattern);
     }
 
     /// <summary>
