@@ -9,9 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Input\" />
     <Folder Include="Configuration\" />
-    <Folder Include="Output\" />
   </ItemGroup>
 
   <ItemGroup>

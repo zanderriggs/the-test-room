@@ -3,13 +3,29 @@
     {
       "id": "1",
       "name": "Lobby",
+      "entryDescription": "",
       "description": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
       "status": ""
     },
     {
       "id": "2",
       "name": "Main Hall",
-      "description": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
+      "entryDescription": "",
+      "description": "The Main Hall was once a grand space. Rugs and tapestries now covered in dust and mold. The air is still. You can almost hear the sounds of merriment that once echoed here.",
+      "status": ""
+    },
+    {
+      "id": "3",
+      "name": "",
+      "entryDescription": "",
+      "description": "",
+      "status": ""
+    },
+    {
+      "id": "3",
+      "name": "",
+      "entryDescription": "",
+      "description": "",
       "status": ""
     }
   ]

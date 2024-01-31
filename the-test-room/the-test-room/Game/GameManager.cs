@@ -17,21 +17,41 @@ class GameManager
     {
         var input = "";
 
+        var level = Start();
+
         while (!input.Equals("q", StringComparison.CurrentCultureIgnoreCase))
         {
             Console.Clear();
             // TODO: method to produce output for user
                 // Output is made up of Decription and Prompt
-            Console.WriteLine("The game has started!");
+            
             Console.WriteLine("You are entering the first room...");
-            var level = LoadLevel();
             var room = level.Locations.FirstOrDefault(x => x.Id.Equals("1"));
             Console.WriteLine($"Room description: {room.Description}");
             Console.WriteLine("Press \"q\" to quit.");
 
             // Collect user input
-            //input = GetUserInput();
+            input = Console.ReadLine();
         }
+    }
+
+    /// <summary>
+    /// Starts game and loads resources.
+    /// </summary>
+    public Level Start()
+    {
+        Console.WriteLine("The game has started!");
+        Console.WriteLine("Loading game resources...");
+        // Load game resources
+        return LoadLevel();
+    }
+
+    /// <summary>
+    /// Runs continuously on user input
+    /// </summary>
+    public void Update()
+    {
+        // TODO: Move description reading and user input to this method
     }
 
     /// <summary>
