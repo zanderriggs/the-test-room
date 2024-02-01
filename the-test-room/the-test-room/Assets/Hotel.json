@@ -3,29 +3,29 @@
     {
       "id": "1",
       "name": "Lobby",
-      "entryDescription": "",
-      "description": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
+      "entryDescription": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
+      "description": "The Lobby is quiet. The front door is closed and locked.",
       "status": ""
     },
     {
       "id": "2",
       "name": "Main Hall",
-      "entryDescription": "",
-      "description": "The Main Hall was once a grand space. Rugs and tapestries now covered in dust and mold. The air is still. You can almost hear the sounds of merriment that once echoed here.",
+      "entryDescription": "The Main Hall was once a grand space. Rugs and tapestries now covered in dust and mold. The air is still. You can almost hear the sounds of merriment that once echoed here.",
+      "description": "The Main Hall stands empty.",
       "status": ""
     },
     {
       "id": "3",
-      "name": "",
-      "entryDescription": "",
-      "description": "",
+      "name": "Coat Room",
+      "entryDescription": "Half empty coat racks line the walls. Red velvet wainscoting. The room is warm and quiet. Inviting. Still.",
+      "description": "The coat room is warm and empty.",
       "status": ""
     },
     {
-      "id": "3",
-      "name": "",
-      "entryDescription": "",
-      "description": "",
+      "id": "4",
+      "name": "Water Closet",
+      "entryDescription": "The bathroom is clean and in good order; white tile floors and and porcelain pedestal sinks. Sound echoes here.",
+      "description": "The bathroom is unoccupied.",
       "status": ""
     }
   ]
