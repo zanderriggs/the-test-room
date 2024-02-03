@@ -27,6 +27,20 @@
       "entryDescription": "The bathroom is clean and in good order; white tile floors and and porcelain pedestal sinks. Sound echoes here.",
       "description": "The bathroom is unoccupied.",
       "status": ""
+    },
+    {
+      "id": "5",
+      "name": "East Wing",
+      "entryDescription": "The East Wing is cold. The doors to the rooms in this wing are closed and locked. The lights flicker every so often",
+      "description": "The East Wing is empty. There is a chill in the air.",
+      "status": ""
+    },
+    {
+      "id": "6",
+      "name": "West Wing",
+      "entryDescription": "The West Wing is warm. Some of the doors are open. Cleaning carts stand in the hall. The air is humid outside one of the doors. Thee shower inside recently run.",
+      "description": "The West Wing is warm. Muffled sounds of tenants can be heard.",
+      "status": ""
     }
   ]
 }

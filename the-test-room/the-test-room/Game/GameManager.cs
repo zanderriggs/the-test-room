@@ -61,6 +61,7 @@ class GameManager
     public Level LoadLevel()
     {
         // Filepath to asset
+        // TODO: Update this to a congif file reference
         var jsonFilePath = "C:\\git\\the-test-room\\The-Test-Room\\the-test-room\\Assets\\Hotel.json";
         
         // Read JSONfile at filepath
