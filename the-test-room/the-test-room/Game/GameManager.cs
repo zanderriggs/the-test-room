@@ -1,14 +1,17 @@
 ﻿using Newtonsoft.Json;
-using System.Text.RegularExpressions;
+using the_test_room.Configuration;
 using the_test_room.Game.Models;
-using System.Linq;
-using System.Data;
+using static the_test_room.Configuration.ConfigurationManager;
 
 namespace the_test_room.Game;
 
 class GameManager
 {
-    public GameManager() { }
+    public AssetConfiguration AssetConfig {  get; set; }
+    public GameManager(AssetConfiguration assetConfiguration) 
+    {
+        AssetConfig = assetConfiguration;
+    }
 
     /// <summary>
     /// Runs the game and returns when user enters input to quick
@@ -60,10 +63,11 @@ class GameManager
     /// <returns>Level object with list of locations.</returns>
     public Level LoadLevel()
     {
-        // Filepath to asset
-        // TODO: Update this to a congif file reference
-        var jsonFilePath = "C:\\git\\the-test-room\\The-Test-Room\\the-test-room\\Assets\\Hotel.json";
-        
+        // Filepath to asset from config
+        var jsonFilePath = AssetConfig.LevelData;
+
+        Console.WriteLine($"Loading JSON from filepath: {AssetConfig.LevelData}");
+
         // Read JSONfile at filepath
         var jsonContent = File.ReadAllText(jsonFilePath);
         var level = new Level();
