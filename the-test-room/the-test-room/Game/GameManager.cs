@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using the_test_room.Configuration;
 using the_test_room.Game.Models;
+using the_test_room.Output;
 using static the_test_room.Configuration.ConfigurationManager;
 
 namespace the_test_room.Game;
@@ -8,16 +9,19 @@ namespace the_test_room.Game;
 class GameManager
 {
     public AssetConfiguration AssetConfig {  get; set; }
-    public GameManager(AssetConfiguration assetConfiguration) 
+    public OutputManager OutputManager { get; set; }
+    public GameManager(AssetConfiguration assetConfiguration, OutputManager outputManager) 
     {
         AssetConfig = assetConfiguration;
+        OutputManager = outputManager;
     }
 
     /// <summary>
-    /// Runs the game and returns when user enters input to quick
+    /// Runs the game and returns when user enters input to quit
     /// </summary>
     public void RunProgram()
     {
+        OutputManager outputManger = new();
         var input = "";
 
         var level = Start();
@@ -30,7 +34,10 @@ class GameManager
             
             Console.WriteLine("You are entering the first room...");
             var room = level.Locations.FirstOrDefault(x => x.Id.Equals("1"));
-            Console.WriteLine($"Room description: {room.Description}");
+
+            // Display text from location
+            OutputManager.DisplayText(room.Description);
+
             Console.WriteLine("Press \"q\" to quit.");
 
             // Collect user input
@@ -58,7 +65,7 @@ class GameManager
     }
 
     /// <summary>
-    /// Loads the level.
+    /// Loads the level data from assets.
     /// </summary>
     /// <returns>Level object with list of locations.</returns>
     public Level LoadLevel()

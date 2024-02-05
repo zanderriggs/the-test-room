@@ -3,12 +3,26 @@
 public class OutputManager
 {
     /// <summary>
-    /// Displays message. Either description from level location or text from dialogue tree.
+    /// Displays text message-- Either description from level location or text from dialogue tree.
     /// </summary>
     /// <param name="message"></param>
-    public static void DisplayMessage(string message)
+    public static void DisplayText(string message)
     {
-        Console.WriteLine(message);
+        PrintTextSlowly(message);
+    }
+
+    /// <summary>
+    /// Prints text as though it is being typed.
+    /// </summary>
+    /// <param name="message"></param>
+    private static void PrintTextSlowly(string message)
+    {
+        foreach (char c in message)
+        {
+            Console.Write(c);
+
+            Thread.Sleep(40);
+        }
     }
 }
 
