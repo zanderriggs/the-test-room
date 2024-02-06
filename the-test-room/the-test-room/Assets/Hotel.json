@@ -3,44 +3,56 @@
     {
       "id": "1",
       "name": "Lobby",
-      "entryDescription": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
-      "description": "The Lobby is quiet. The front door is closed and locked.",
-      "status": ""
+      "description": "The lobby is a dust room empty of furnishings. Small scuffs cover the floor. A well-used room in an old building. Poorly cared for.",
+      "status": "",
+      "destinationIds": [
+        "2","3"
+      ]
     },
     {
       "id": "2",
       "name": "Main Hall",
-      "entryDescription": "The Main Hall was once a grand space. Rugs and tapestries now covered in dust and mold. The air is still. You can almost hear the sounds of merriment that once echoed here.",
-      "description": "The Main Hall stands empty.",
-      "status": ""
+      "description": "The Main Hall was once a grand space. Rugs and tapestries now covered in dust and mold. The air is still. You can almost hear the sounds of merriment that once echoed here.",
+      "status": "",
+      "destinationIds": [
+        "3","4","5","6"
+      ]
     },
     {
       "id": "3",
       "name": "Coat Room",
-      "entryDescription": "Half empty coat racks line the walls. Red velvet wainscoting. The room is warm and quiet. Inviting. Still.",
-      "description": "The coat room is warm and empty.",
-      "status": ""
+      "description": "Half empty coat racks line the walls. Red velvet wainscoting. The room is warm and quiet. Inviting. Still.",
+      "status": "",
+      "destinationIds": [
+        "1","2"
+      ]
     },
     {
       "id": "4",
       "name": "Water Closet",
-      "entryDescription": "The bathroom is clean and in good order; white tile floors and and porcelain pedestal sinks. Sound echoes here.",
-      "description": "The bathroom is unoccupied.",
-      "status": ""
+      "description": "The bathroom is clean and in good order; white tile floors and and porcelain pedestal sinks. Sound echoes here.",
+      "status": "",
+      "destinationIds": [
+        "2"
+      ]
     },
     {
       "id": "5",
       "name": "East Wing",
-      "entryDescription": "The East Wing is cold. The doors to the rooms in this wing are closed and locked. The lights flicker every so often",
-      "description": "The East Wing is empty. There is a chill in the air.",
-      "status": ""
+      "description": "The East Wing is cold. The doors to the rooms in this wing are closed and locked. The lights flicker every so often",
+      "status": "",
+      "destinationIds": [
+        "2"
+      ]
     },
     {
       "id": "6",
       "name": "West Wing",
-      "entryDescription": "The West Wing is warm. Some of the doors are open. Cleaning carts stand in the hall. The air is humid outside one of the doors. Thee shower inside recently run.",
-      "description": "The West Wing is warm. Muffled sounds of tenants can be heard.",
-      "status": ""
+      "description": "The West Wing is warm. Some of the doors are open. Cleaning carts stand in the hall. The air is humid outside one of the doors. Thee shower inside recently run.",
+      "status": "",
+      "destinationIds": [
+        "2"
+      ]
     }
   ]
 }

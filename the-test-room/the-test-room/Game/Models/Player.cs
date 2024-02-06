@@ -7,10 +7,11 @@ public class Player
     public int Prowess { get; set; }
     public int Resolve {  get; set; }
     public List<string> Inventory { get; set; } = new List<string>();
+    public string LocationId { get; set; } = "1";
 
     public Player()
     {
-            
+
     }
 
     // Inventory Maangement
@@ -22,6 +23,11 @@ public class Player
     public void RemoveItemFromInventory(string item) 
     {  
         Inventory.Remove(item);
+    }
+
+    public void SetLocation(string locationId)
+    {
+        LocationId = locationId;
     }
 
     /// <summary>

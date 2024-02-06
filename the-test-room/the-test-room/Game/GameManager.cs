@@ -26,6 +26,8 @@ class GameManager
 
         var level = Start();
 
+        var player = new Player();
+
         while (!input.Equals("q", StringComparison.CurrentCultureIgnoreCase))
         {
             Console.Clear();
@@ -33,12 +35,14 @@ class GameManager
                 // Output is made up of Decription and Prompt
             
             Console.WriteLine("You are entering the first room...");
-            var room = level.Locations.FirstOrDefault(x => x.Id.Equals("1"));
+            var room = level.Locations.FirstOrDefault(x => x.Id.Equals(player.LocationId));
 
             // Display text from location
             OutputManager.DisplayText(room.Description);
+            var locationList = level.Locations.Where(i => room.DestinationIds.Contains(i.Id)).ToList();
+            OutputManager.DisplayPlayerOptions(locationList);
 
-            Console.WriteLine("Press \"q\" to quit.");
+            Console.WriteLine("Enter a numbered selection or press \"q\" to quit:");
 
             // Collect user input
             input = Console.ReadLine();

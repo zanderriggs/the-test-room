@@ -1,4 +1,6 @@
-﻿namespace the_test_room.Output;
+﻿using the_test_room.Game.Models;
+
+namespace the_test_room.Output;
 
 public class OutputManager
 {
@@ -21,8 +23,25 @@ public class OutputManager
         {
             Console.Write(c);
 
-            Thread.Sleep(40);
+            Thread.Sleep(15);
         }
+        Console.WriteLine();
+    }
+
+    /// <summary>
+    /// Prints locations as numbered selections for the player to select by entering the number.
+    /// </summary>
+    /// <param name="locations"></param>
+    public static void DisplayPlayerOptions(List<Location> locations)
+    {
+        var number = 1;
+
+        foreach (var location in locations)
+        {
+            Console.WriteLine($"{number}. {location.Name}");
+            number++;
+        }
+
     }
 }
 

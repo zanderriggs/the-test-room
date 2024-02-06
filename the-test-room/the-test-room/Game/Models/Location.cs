@@ -6,4 +6,5 @@ public class Location
     public string Description { get; set; }
     public string Status { get; set; }
     public List<string> NPCs { get; set; }
+    public List<string> DestinationIds { get; set; }
 }
