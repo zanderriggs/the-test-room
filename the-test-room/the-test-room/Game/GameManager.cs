@@ -31,11 +31,12 @@ class GameManager
         while (!input.Equals("q", StringComparison.CurrentCultureIgnoreCase))
         {
             Console.Clear();
+
             // TODO: method to produce output for user
                 // Output is made up of Decription and Prompt
             
-            Console.WriteLine("You are entering the first room...");
             var room = level.Locations.FirstOrDefault(x => x.Id.Equals(player.LocationId));
+            Console.WriteLine($"You are entering the {room.Name}...");
 
             // Display text from location
             OutputManager.DisplayText(room.Description);
@@ -44,8 +45,26 @@ class GameManager
 
             Console.WriteLine("Enter a numbered selection or press \"q\" to quit:");
 
+
             // Collect user input
             input = Console.ReadLine();
+
+
+            // TODO: Turn this into a method somewhere else
+            // This is probably two separate methods.
+                // One method to parse user input and another to figure out the correct location and move
+            if(int.TryParse(input, out var result) == true)
+            {
+                // Available Room Ids
+                var availableLocationIds = room.DestinationIds;
+                
+                // Determine location to move based on user input
+                var locationToMove = level.Locations.FirstOrDefault(x => x.Id == availableLocationIds[result-1]);
+                
+                // Move to location at result
+                player.SetLocation(locationToMove.Id);
+                Console.ReadLine();
+            }
         }
     }
 
