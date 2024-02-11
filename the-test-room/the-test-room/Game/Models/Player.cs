@@ -31,6 +31,15 @@ public class Player
     }
 
     /// <summary>
+    /// Retrieves plater location id.
+    /// </summary>
+    /// <returns>Location Id value as string</returns>
+    public string GetLocation()
+    {
+        return LocationId;
+    }
+
+    /// <summary>
     /// Returns inventory items as a comma separated list for printing in sentences
     /// </summary>
     public string GetInventoryItemsAsSentence()

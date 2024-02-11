@@ -31,11 +31,9 @@ class GameManager
         while (!input.Equals("q", StringComparison.CurrentCultureIgnoreCase))
         {
             Console.Clear();
-
-            // TODO: method to produce output for user
-                // Output is made up of Decription and Prompt
             
-            var room = level.Locations.FirstOrDefault(x => x.Id.Equals(player.LocationId));
+            // Get and display location description
+            var room = level.Locations.FirstOrDefault(x => x.Id.Equals(player.GetLocation()));
             Console.WriteLine($"You are entering the {room.Name}...");
 
             // Display text from location
