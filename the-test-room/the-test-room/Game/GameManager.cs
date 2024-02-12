@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using the_test_room.Assets;
 using the_test_room.Configuration;
 using the_test_room.Game.Models;
 using the_test_room.Output;
@@ -9,10 +10,12 @@ namespace the_test_room.Game;
 class GameManager
 {
     public AssetConfiguration AssetConfig {  get; set; }
+    public AssetManager AssetManager { get; set; }
     public OutputManager OutputManager { get; set; }
-    public GameManager(AssetConfiguration assetConfiguration, OutputManager outputManager) 
+    public GameManager(AssetConfiguration assetConfiguration, AssetManager assetManager, OutputManager outputManager) 
     {
         AssetConfig = assetConfiguration;
+        AssetManager = assetManager;
         OutputManager = outputManager;
     }
 
@@ -73,8 +76,12 @@ class GameManager
     {
         Console.WriteLine("The game has started!");
         Console.WriteLine("Loading game resources...");
+
         // Load game resources
-        return LoadLevel();
+        AssetManager.LoadAssets();
+
+        // Return Level from Asset Manager
+        return GetLevel();
     }
 
     /// <summary>
@@ -86,36 +93,11 @@ class GameManager
     }
 
     /// <summary>
-    /// Loads the level data from assets.
+    /// Retrieves Level from Asset Manager
     /// </summary>
     /// <returns>Level object with list of locations.</returns>
-    public Level LoadLevel()
+    public Level GetLevel()
     {
-        // Filepath to asset from config
-        var jsonFilePath = AssetConfig.LevelData;
-
-        Console.WriteLine($"Loading JSON from filepath: {AssetConfig.LevelData}");
-
-        // Read JSONfile at filepath
-        var jsonContent = File.ReadAllText(jsonFilePath);
-        var level = new Level();
-
-        try
-        {
-            // Deserialize JSON
-            level = JsonConvert.DeserializeObject<Level>(jsonContent);
-
-            if (level == null)
-            {
-                Console.WriteLine("Location data not found");
-                return new Level();
-            }
-            return level;
-        }
-        catch (Exception ex) 
-        {
-            Console.WriteLine($"An exception occurred while deserializing Json: {ex.Message}");
-            return new Level();
-        }
+        return AssetManager.GetLevels().First();
     }
 }

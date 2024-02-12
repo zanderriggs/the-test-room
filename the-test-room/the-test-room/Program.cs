@@ -1,4 +1,5 @@
-﻿using the_test_room.Configuration;
+﻿using the_test_room.Assets;
+using the_test_room.Configuration;
 using the_test_room.Game;
 using the_test_room.Output;
 
@@ -6,12 +7,14 @@ Console.WriteLine("Starting Game...");
 
 // Load configuration
 ConfigurationManager configManager = new ConfigurationManager();
-OutputManager outputManager = new OutputManager();
 configManager.LoadConfig();
+AssetManager assetManager = new AssetManager(configManager.AssetConfig);
+OutputManager outputManager = new OutputManager();
+
 Console.WriteLine("Configuration loaded...");
 
 // Application logic soon to come
-var gameManager = new GameManager(configManager.AssetConfig, outputManager);
+var gameManager = new GameManager(configManager.AssetConfig, assetManager, outputManager);
 gameManager.RunProgram();
 
 // For testing:
